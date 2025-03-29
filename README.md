@@ -1,61 +1,67 @@
-💰 Personal Finance Manager
+# 💰 Personal Finance Manager
+
 A decentralized application for tracking personal finances.
 
-Key Features
-➕ Add transactions (income & expenses)
-📊 View current balance
-📅 Full transaction history
-🔄 Reset financial statistics
-🔐 Blockchain data storage
-Technology Stack
+## Key Features
+
+- ➕ Add transactions (income & expenses)
+- 📊 View current balance
+- 📅 Full transaction history
+- 🔄 Reset financial statistics
+- 🔐 Blockchain data storage
+
+## Technology Stack
+
 Client-side:
+- React.js
+- Vite (build tool)
+- lit-html (templating)
+- SCSS (styling)
 
-React.js
-Vite (build tool)
-lit-html (templating)
-SCSS (styling)
 Server-side:
+- Motoko programming language
+- Internet Computer Protocol
+- DFX SDK
 
-Motoko programming language
-Internet Computer Protocol
-DFX SDK
-Architecture
+## Architecture
+
 The application consists of:
+1. Frontend - User interface
+   - Key files:
+   - App.js - Main component
+   - main.js - Entry point
+   - index.html - Base template
 
-Frontend - User interface
+2. Backend Canister - Data logic
+   - main.mo - Core logic
+   - dfx.json - Configuration
 
-Key files:
-App.js - Main component
-main.js - Entry point
-index.html - Base template
-Backend Canister - Data logic
-
-main.mo - Core logic
-dfx.json - Configuration
-Interaction Interfaces (DID files) Automatically generated during deployment
+3. Interaction Interfaces (DID files)
+   Automatically generated during deployment
 
 How it works:
 
 After dfx deploy, these files are generated:
+- .did - CIDL interface
+- .did.js - JS adapter for frontend
+- .d.ts - TypeScript types
 
-.did - CIDL interface
-.did.js - JS adapter for frontend
-.d.ts - TypeScript types
-Installation Guide
-1. Install required tools
+## Installation Guide
+
+### 1. Install required tools
 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 
-2. Clone and prepare the project
+### 2. Clone and prepare the project
 git clone https://github.com/yourusername/finance-app-ic.git
 
 cd finance-app-ic
 
 npm install
 
-3. Start local network
+### 3. Start local network
 dfx start --background --clean
 
-4. Deploy the application
+### 4. Deploy the application
 dfx deploy
 
 npm run dev
